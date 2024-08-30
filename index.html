@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div id="header">
+    <div class="container pt-3">
+      <nav class="d-flex justify-content-between align-items-center flex-wrap">
+        <h3 class="fw-bold text-white">ADHULVAS P S</h3>
+        <ul id="sidemenu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <h4 class="fw-bold">Hi, I'm <span style="color: #ff004f;">Adhulvas</span></h4>
+        <h1 class="fw-bold">Front-end Web Developer.</h1>
+        <p class="fw-bold mb-2">Like to craft solid and scalable frontend products with great user experiences.</p>
+        <a href="#about"><button class="about-button link-light">About me &#x27A2;</button></a>
+      </div>
+    </div>
+  </div>
+
+  <!--about-section-->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 d-flex justify-content-center">
+          <img class="profile-picture" src="/Images/7099 copy.jpg" alt="profile-picture">
+        </div>
+        <div class="col-lg-8 col-md-12 content-area">
+          <h1 class="fw-bold text-white">About Me</h1>
+          <p>Passionate web developer with a keen interest in building user-friendly and responsive websites. With a background in Electronics and a growing expertise in front-end development, passionate about staying updated on frontend tech.Collaborative and committed to quality, you thrive in dynamic teams. Eager to contribute creativity and bring innovative ideas to life.</p>
+
+          <div class="sub-titles d-flex">
+            <div class="sub-links" onclick="showContent('skills', this)">Skills</div>
+            <div class="sub-links" onclick="showContent('experience', this)">Experience</div>
+            <div class="sub-links" onclick="showContent('education', this)">Education</div>
+          </div>
+          <div class="sub-contents active-sub" id="skills">
+              <div class="row gap-3">
+                <div class="col frontend">
+                  <div class="logos">
+                    <img src="/Images/html-5-svgrepo-com.svg" width="25px">
+                    <p class="ms-2">HTML</p>
+                  </div>
+                  <div class="logos">
+                    <img src="/Images/css-3-svgrepo-com.svg" width="25px">
+                    <p class="ms-2">CSS</p>
+                  </div>
+                  <div class="logos">
+                    <img src="/Images/js-official-svgrepo-com.svg" width="25px">
+                    <p class="ms-2">JavaScript</p>
+                  </div>
+                  <div class="logos">
+                    <img src="/Images/bootstrap-svgrepo-com.svg" width="25px">
+                    <p class="ms-2">Bootstrap</p>
+                  </div>
+                  <div class="logos">
+                    <img src="/Images/react-svgrepo-com.svg" width="25px">
+                    <p class="ms-2">React Js</p>
+                  </div>
+                  <div class="logos">
+                    <img src="/Images/redux-svgrepo-com.svg" width="25px">
+                    <p class="ms-2">Redux</p>
+                  </div>
+                  <div class="logos">
+                    <img src="/Images/git-svgrepo-com.svg" width="25px">
+                    <p class="ms-2">Git</p>
+                  </div>
+                  <div class="logos">
+                    <img src="/Images/github-color-svgrepo-com.svg" width="25px">
+                    <p class="ms-2">GitHub</p>
+                  </div>
+                  <div class="logos">
+                    <img src="/Images/vs-code-svgrepo-com.svg" width="25px">
+                    <p class="ms-2">VS Code</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="sub-contents" id="experience">
+            <p>Fresher</p>
+          </div>
+          <div class="sub-contents" id="education">
+            <ul>
+              <li><span>2021</span><br>BSC Electronics</li>
+              <li><span>2018</span><br>Plus Two</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--portfolio-section-->
+  <div id="portfolio">
+    <div class="container">
+      <div class="filter">
+        <h1 class="fw-bold mb-3">Projects</h1>
+        <ul class="filter-buttons">
+          <li class="filter-btn" onclick="filterProjects('all')">ALL</li>
+          <li class="filter-btn" onclick="filterProjects('web-development')">WEB-DEVELOPMENT</li>
+          <li class="filter-btn" onclick="filterProjects('design')">DESIGN</li>
+        </ul>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 my-3 d-flex justify-content-center">
+          <div class="card" data-category="design">
+            <img src="/Images/projects/nytimes.png">
+            <div class="layer">
+              <h5>Newyork Times</h5>
+              <p>Designed a replica of the New York Times website using HTML and CSS, focusing on accurately recreating its sophisticated layout and typography.</p>
+              <a href="https://newyorktimes.onrender.com"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 my-3 d-flex justify-content-center">
+          <div class="card" data-category="web-development">
+            <img src="/Images/projects/calculator.png">
+            <div class="layer">
+              <h5>Calculator</h5>
+              <p>Developed a functional calculator using HTML, CSS, and JavaScript. This calculator handles basic arithmetic operations and features a clean, intuitive interface.</p>
+              <a href="https://calculator-yxvi.onrender.com"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6 my-3 d-flex justify-content-center">
+          <div class="card" data-category="design">
+            <img src="/Images/projects/Youtube.png">
+            <div class="layer">
+              <h5>YouTube Clone</h5>
+              <p>Designed the older version of YouTube using HTML and CSS, focusing on replicating its layout and user interface.
+              </p>
+              <a href="https://youtubeclone-7kxn.onrender.com"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6 my-3 d-flex justify-content-center">
+          <div class="card" data-category="web-development">
+            <img src="/Images/projects/rps.png">
+            <div class="layer">
+              <h5>Rock Paper Scissor</h5>
+              <p>Developed a Rock-Paper-Scissors game using HTML, CSS, and JavaScript. The game is fully interactive, allowing players to compete against the computer with instant feedback on the outcome of each round.</p>
+              <a href="https://rockpaperscissors-kyog.onrender.com"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6 my-3 d-flex justify-content-center">
+          <div class="card" data-category="design">
+            <img src="/Images/projects/dc.clone.png">
+            <div class="layer">
+              <h5>DC Clone</h5>
+              <p>Recreated the DC official site using HTML,CSS,and Bootstrap focusing on creating a visually appealing and responsive layout.</p>
+              <a href="https://adhulvas.github.io/myFirstProject/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6 my-3 d-flex justify-content-center">
+          <div class="card" data-category="web-development">
+            <img src="/Images/projects/multipage.png">
+            <div class="layer">
+              <h5>React Web App</h5>
+              <p>A sample multi-page React web application that showcases key React features, including components, routing, data fetching, and a simple Todo app.</p>
+              <a href="https://react-web-app-ceqr.onrender.com/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--contact-section-->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 contact-left">
+          <h1 class="fw-bold">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i> adhulvas2000@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i> 7594829230</p>
+          <div class="social-icons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6 contact-right">
+          <form id="contactForm" onsubmit="return validate()">
+            <div class="name-input">
+              <input type="text" id="name" name="Name" placeholder="Your Name" onkeyup="validateName()">
+              <span id="name-error"></span>
+            </div>
+            <div class="email-input">
+              <input type="email" id="email" name="email" placeholder="Your Email" onkeyup="validateEmail()">
+              <span id="email-error"></span>
+            </div>
+            <div class="message-input">
+              <textarea name="Message" id="message" rows="6" placeholder="Your Message" onkeyup="validateMessage()"></textarea>
+              <span id="message-error"></span>
+            </div>
+            <button type="submit" class="btn">Send</button>
+          </form>
+          <div id="feedback" class="feedback"></div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright <i class="fa-regular fa-copyright"></i> 2024 by @Adhulvas.</p>
+    </div>
+  </div>
+
+  <script src="/portfolio.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
